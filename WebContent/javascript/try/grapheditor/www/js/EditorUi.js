@@ -2561,6 +2561,7 @@ EditorUi.prototype.updateActionStates = function()
     this.actions.get('grid').setEnabled(!this.editor.chromeless);
 
     var unlocked = graph.isEnabled() && !graph.isCellLocked(graph.getDefaultParent());
+    this.menus.get('open').setEnabled(unlocked);
     this.menus.get('layout').setEnabled(unlocked);
     this.menus.get('insert').setEnabled(unlocked);
     this.menus.get('direction').setEnabled(unlocked && vertexSelected);
